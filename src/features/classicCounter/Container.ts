@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { RootState } from "../../app/store";
-import { OldCounter } from "./components/OldCounter";
+import { ClassicCounter } from "./components/ClassicCounter";
 import * as actions from "./actions";
 import * as selectors from "./selectors";
 
@@ -14,4 +14,4 @@ export default connect(mapStateToProps, {
   incrementByAmount: actions.incrementByAmount,
   incrementAsync: actions.incrementAsync,
   incrementIfOdd: actions.incrementIfOdd,
-})(OldCounter);
+})(ClassicCounter);

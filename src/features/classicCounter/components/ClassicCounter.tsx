@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "../styles/OldCounter.module.css";
+import styles from "../styles/ClassicCounter.module.css";
 
-export interface OldCounterProps {
+export interface ClassicCounterProps {
   decrement: () => void;
   increment: () => void;
   incrementByAmount: (value: number) => void;
@@ -10,14 +10,14 @@ export interface OldCounterProps {
   count: number;
 }
 
-export const OldCounter = ({
+export const ClassicCounter = ({
   decrement,
   increment,
   incrementByAmount,
   incrementAsync,
   incrementIfOdd,
   count,
-}: OldCounterProps) => {
+}: ClassicCounterProps) => {
   const [incrementAmount, setIncrementAmount] = useState("2");
 
   const incrementValue = Number(incrementAmount) || 0;

@@ -63,7 +63,7 @@ export const incrementIfOdd = (amount: number) => {
     dispatch: ThunkDispatch<RootState, Promise<void>, Action>,
     getState: () => RootState
   ) => {
-    const currentValue = getState().oldCounter.value;
+    const currentValue = getState().classicCounter.value;
     if (currentValue % 2 === 1) {
       dispatch(incrementByAmount(amount));
     }

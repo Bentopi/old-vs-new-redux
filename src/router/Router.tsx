@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import { Counter } from "../features/counter/components/Counter";
-import OldCounter from "../features/oldCounter/Container";
+import ClassicCounter from "../features/classicCounter/Container";
 import logo from "../logo.svg";
 
 const Router = (): JSX.Element => {
@@ -21,7 +21,7 @@ const Router = (): JSX.Element => {
         alt="logo"
       />
       <Switch>
-        <Route path="/old" component={OldCounter} />
+        <Route path="/old" component={ClassicCounter} />
         <Route path="/" component={Counter} />
       </Switch>
     </BrowserRouter>

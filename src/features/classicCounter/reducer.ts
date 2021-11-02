@@ -9,7 +9,7 @@ const initialState: OldCounterState = {
   value: 0,
   status: "idle",
 };
-const oldCounterReducer = (
+const classicCounterReducer = (
   state = initialState,
   action: actionTypes.OldCounterActionTypes
 ): OldCounterState => {
@@ -64,4 +64,4 @@ const oldCounterReducer = (
   }
 };
 
-export default oldCounterReducer;
+export default classicCounterReducer;
