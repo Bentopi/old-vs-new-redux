@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppSelector, useAppDispatch } from "../../../app/hooks";
 import {
   decrement,
   increment,
@@ -8,10 +7,10 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from "./oldCounterSlice";
-import styles from "./OldCounter.module.css";
+} from "../counterSlice";
+import styles from "../styles/Counter.module.css";
 
-export function OldCounter() {
+export function Counter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
@@ -20,7 +19,7 @@ export function OldCounter() {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Classic Redux</h1>
+      <h1 style={{ textAlign: "center" }}>Modern Redux</h1>
       <div className={styles.row}>
         <button
           className={styles.button}

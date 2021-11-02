@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import { Counter } from "../features/counter/Counter";
-import { OldCounter } from "../features/oldCounter/OldCounter";
+import { Counter } from "../features/counter/components/Counter";
+import OldCounter from "../features/oldCounter/Container";
 import logo from "../logo.svg";
 
 const Router = (): JSX.Element => {
