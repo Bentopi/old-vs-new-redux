@@ -8,10 +8,10 @@ import {
   incrementAsync,
   incrementIfOdd,
   selectCount,
-} from "./counterSlice";
-import styles from "./Counter.module.css";
+} from "./oldCounterSlice";
+import styles from "./OldCounter.module.css";
 
-export function Counter() {
+export function OldCounter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
@@ -20,7 +20,7 @@ export function Counter() {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center" }}>Modern Redux</h1>
+      <h1 style={{ textAlign: "center" }}>Classic Redux</h1>
       <div className={styles.row}>
         <button
           className={styles.button}
