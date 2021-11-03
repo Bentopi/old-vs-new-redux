@@ -1,5 +1,5 @@
 import { ThunkDispatch, Action } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store";
+import { AppDispatch, RootState } from "../../app/store";
 import * as actionTypes from "./types/actionTypes";
 import * as api from "./api";
 
@@ -61,10 +61,7 @@ export const incrementAsync = (amount: number) => {
 };
 
 export const incrementIfOdd = (amount: number) => {
-	return (
-		dispatch: ThunkDispatch<RootState, Promise<void>, Action>,
-		getState: () => RootState
-	): void => {
+	return (dispatch: AppDispatch, getState: () => RootState): void => {
 		const currentValue = getState().classicCounter.value;
 		if (currentValue % 2 === 1) {
 			dispatch(incrementByAmount(amount));
