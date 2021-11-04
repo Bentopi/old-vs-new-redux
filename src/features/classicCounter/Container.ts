@@ -8,15 +8,15 @@ const mapStateToProps = (state: RootState) => ({
 	count: selectors.getCount(state),
 });
 
-// const mapDispatchToProps = (dispatch: Dispatch) => ({
-//   decrement: () => dispatch(actions.decrement()),
-//   increment: () => dispatch(actions.increment()),
-// });
-
 export default connect(mapStateToProps, {
-	decrement: actions.decrement,
 	increment: actions.increment,
+	decrement: actions.decrement,
 	incrementByAmount: actions.incrementByAmount,
 	incrementAsync: actions.incrementAsync,
 	incrementIfOdd: actions.incrementIfOdd,
 })(ClassicCounter);
+
+// const mapDispatchToProps = (dispatch: Dispatch) => ({
+//   increment: () => dispatch(actions.increment()),
+//   decrement: () => dispatch(actions.decrement()),
+// });

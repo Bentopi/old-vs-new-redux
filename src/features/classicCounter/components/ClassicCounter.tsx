@@ -11,12 +11,12 @@ export interface ClassicCounterProps {
 }
 
 export const ClassicCounter = ({
-	decrement,
+	count,
 	increment,
+	decrement,
 	incrementByAmount,
 	incrementAsync,
 	incrementIfOdd,
-	count,
 }: ClassicCounterProps): JSX.Element => {
 	const [incrementAmount, setIncrementAmount] = useState("2");
 
